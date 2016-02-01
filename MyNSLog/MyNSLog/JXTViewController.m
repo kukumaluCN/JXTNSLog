@@ -24,7 +24,7 @@
     DeBugLog(@"打印日志2");
     NSLog(@"打印日志3");
     MyNSLog(@"打印日志4");
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
