@@ -21,11 +21,16 @@
     /**
      *  具体使用
      */
-    DLog(@"打印日志");
-    DLog();
     
+    //1.DLog带参数
+    DLog(@"打印日志");
+    //2.DLog不带参数
+    DLog();
+    //3.DeBugLog
     DeBugLog(@"打印日志2");
+    //4.重写的NSLog
     NSLog(@"打印日志3");
+    //5.带详细信息的NSLog
     MyNSLog(@"打印日志4");
     
 }
