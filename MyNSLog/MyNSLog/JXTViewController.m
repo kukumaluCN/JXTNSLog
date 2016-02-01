@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    /**
+     *  具体使用
+     */
     DLog(@"打印日志");
     DLog();
     
