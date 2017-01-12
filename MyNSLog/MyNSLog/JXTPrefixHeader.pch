@@ -17,7 +17,7 @@
  *
  *  0:开发环境  1:发布环境  2:测试环境
  */
-#define MY_PROJECT_GLOBAL_CONTROL 0
+#define MY_PROJECT_GLOBAL_CONTROL 1
 
 /**
  *  log用法1
@@ -42,13 +42,12 @@
 #define DeBugLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #define NSLog(...) NSLog(__VA_ARGS__);
 #define MyNSLog(FORMAT, ...) fprintf(stderr,"[%s]:[line %d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-#endif
 
-#if (MY_PROJECT_GLOBAL_CONTROL == 1)
+#elif (MY_PROJECT_GLOBAL_CONTROL == 1)
 #define DLog(...)
 #define DeBugLog(...)
 #define NSLog(...)
-#define MyNSLog(FORMAT, ...) nil
+#define MyNSLog(FORMAT, ...) 
 #endif
 
 
